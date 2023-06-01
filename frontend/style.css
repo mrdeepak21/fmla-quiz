@@ -1,0 +1,177 @@
+:root{
+    --purple: #761ba2;
+    --blue: #1976d2;
+}
+
+.quiz{
+    font-size: 16px;
+    min-height: 500px;
+}
+
+.quiz-entry{
+    text-align: center;
+}
+
+.quiz button{
+    outline: none;
+}
+
+#submit {
+    min-width: 100px;
+}
+
+.quiz .btn-primary{
+    background-color: var(--purple);
+    color: #fff;
+    border-color: var(--purple);
+    font-weight: bold;
+} 
+ 
+.quiz .btn-primary:hover{
+background-color: #fff;
+color: var(--purple);
+}
+
+.quiz .number{
+    color: var(--blue);
+    font-size: medium;
+}
+
+.quiz .btn-secondary span{
+    border: 1px solid var(--blue);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.quiz .btn-secondary{
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    margin-top: 10px;
+    width: 150px;
+    border-radius: 4px;
+    background-color: #1976d21a;
+    text-align: left;
+    padding: 8px 8px 8px 1px;
+}
+
+.quiz .btn-secondary:hover, .quiz .btn-secondary.active{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.quiz .btn-secondary span:hover{
+    border-color: #fff;
+}
+
+.quiz {
+    position: relative;
+}
+
+.quiz .icon{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.quiz .icon button {
+    padding: 5px 10px;
+}
+
+  
+  .slide {
+    position: relative;
+  }
+  
+  .btn-lg{
+      font-size: 22px;
+  }
+  
+  .text-center{
+      text-align: center !important;
+  }
+  
+
+  #spin{
+      border: 2px solid #ccc;
+    border-top-color: var(--blue);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 0.5s infinite linear;
+      display: inline-block;
+  }
+
+  @keyframes spin {
+    from {
+      -webkit-transform: rotateZ(0deg)
+    }
+    to {
+      -webkit-transform: rotateZ(360deg)
+    }
+  }
+
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotateZ(360deg)
+    }
+    to {
+      -webkit-transform: rotateZ(0deg)
+    }
+  }
+
+  /* Progressbar */
+
+  
+
+  .progressbar {
+    margin: 50px 0;
+    counter-reset: step;
+    padding: 1px 0;
+}
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+.progressbar li:before {
+    width: 15px;
+    height: 15px;
+    content: '';
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    background-color: #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    transition: all .8s;
+}
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 7px;
+    left: -50%;
+    z-index: -1;
+    transition: all .8s;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active:before {
+    border-color: var(--purple);
+    background-color: var(--purple);
+    transition: all 2s;
+}
+.progressbar li.active:after {
+    background-color: var(--purple);
+    transition: all 2s;
+}
